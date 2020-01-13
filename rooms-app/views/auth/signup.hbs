@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="justify-content-center mt-5 row">
+    <form action="/signup" method="post" class="text-center mb-4">
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email" class="form-control" placeholder="Enter your email address" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="myPassword" class="form-control" placeholder="Create your password"
+          required>
+      </div>
+      <div class="form-group">
+        <label for="fullName">Full Name:</label>
+        <input type="text" name="fullName" id="fullName" class="form-control" placeholder="Enter your full name"
+          required>
+      </div>
+      <button type="submit" class="btn btn-primary">Signup</button>
+      {{#if message}}
+      <p class="err-message">{{message}}</p>
+      {{/if}}
+    </form>
+    <div class="col-12 text-center">
+      <a href="/">Home</a>
+    </div>
+  </div>
+</div>
