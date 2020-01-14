@@ -10,19 +10,19 @@ const rooms = [
         name: "Room Ingolstadt",
         description: "Nice Room next to Westpark",
         imageUrl: "",
-        owner: "5e1d8e39d1cf47e81cfdc610"
+        owner: "5e1c7df87f88473fb4ae8885"
     },
     {
         name: "Room Munich",
         description: "Nice Room next to Hauptbahnhof",
         imageUrl: "",
-        owner: "5e1d8e39d1cf47e81cfdc610"
+        owner: "5e1c7df87f88473fb4ae8885"
     },
     {
         name: "Room Erfurt",
         description: "Nice Room in Erfurt Altstadt",
         imageUrl: "",
-        owner: "5e1d8e39d1cf47e81cfdc610"
+        owner: "5e1c7df87f88473fb4ae8885"
     },
 ];
 

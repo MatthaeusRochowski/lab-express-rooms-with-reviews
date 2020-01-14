@@ -1,0 +1,15 @@
+<h2>Edit your Room</h2>
+<form action="/rooms/{{room._id}}/edit" method="POST"\>
+  <label for="name">Name</label> 
+  <input id="name" type="text" name="name" value="{{room.name}}">
+  
+  <label for="description">Description</label> 
+  <input id="description" type="text" name="description" value="{{room.description}}">
+
+  <label for="owner">Owner</label> 
+  <input id="owner" type="text" name="owner" value="{{room.owner.fullName}}" readonly>
+  
+  <button type="submit">Save</button>
+</form>
+
+<a href="/myrooms">Back</a>

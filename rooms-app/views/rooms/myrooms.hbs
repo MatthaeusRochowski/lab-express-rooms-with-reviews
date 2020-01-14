@@ -1,8 +1,13 @@
-<h2>All Rooms</h2>
+<h2>My Rooms</h2>
 
 {{#each this.rooms}}
 {{> roomPartials }}
+<form action="rooms/{{this._id}}/edit" method="get">
+    <button type="submit">EDIT</button>
+</form>
 {{/each}}
+
+<br><br>
 
 {{#if this.user}}
 <a href="/private">Return</a>

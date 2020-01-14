@@ -1,8 +1,18 @@
 <nav id="nav-container">
+  <a href="/rooms">Show Rooms</a>
   <a href="/logout">Logout</a>
 </nav>
 
 <h1>Welcome {{ user.fullName }}</h1>
 
+<div>
+  <form action="/rooms/new" method="GET" \>
+    <button type="submit">Add new Room</button>
+  </form>
+</div>
 
-<a href="/">Back to the home page</a>
+<div>
+  <form action="/myrooms" method="GET" \>
+    <button type="submit">Show my Rooms</button>
+  </form>
+</div>
