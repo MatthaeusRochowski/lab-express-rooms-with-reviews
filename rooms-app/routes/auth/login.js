@@ -1,7 +1,7 @@
 const express = require("express");
 const bcrypt = require("bcryptjs");
 const router = express.Router();
-const User = require("../models/User");
+const User = require("../../models/User");
 
 router.get("/", (req, res, next) => {
     console.log("inside login route");
@@ -31,9 +31,7 @@ router.get("/", (req, res, next) => {
         if (bcrypt.compareSync(password, user.password)) {
             req.session.currentUser = user;
             console.log('session opened', req.session );// Save the login in the session!
-            return res.render("index", {
-                message: `Guten Tag ${user.fullName}!`
-              });
+            return res.render("rooms/private", { user });
         } else {
           res.render("auth/login", {
             errorMessage: "Incorrect password"

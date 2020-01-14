@@ -58,6 +58,9 @@ app.use(session({
   })
 }));
 
+// Register Partials
+hbs.registerPartials(__dirname + '/views/partials');
+
 
 // default value for title local
 app.locals.title = 'Express - Generated with IronGenerator';
@@ -66,11 +69,11 @@ app.locals.title = 'Express - Generated with IronGenerator';
 
 const index = require('./routes/index');
 app.use('/', index);
-const signup = require('./routes/signup');
+const signup = require('./routes/auth/signup');
 app.use('/signup', signup);
-const login = require('./routes/login');
+const login = require('./routes/auth/login');
 app.use('/login', login);
-const logout = require('./routes/logout');
+const logout = require('./routes/auth/logout');
 app.use('/logout', logout);
 
 
